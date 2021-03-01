@@ -4,5 +4,29 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ProcedureSelector.unity
+    guid: 6b2907997134c68448ea7f5cf7ea90cf
+  - enabled: 1
+    path: Assets/Scenes/CharacterCreation.unity
+    guid: ee3c9f40e1b594e4fb2066ccdc5bfac9
+  - enabled: 1
+    path: Assets/Scenes/AuscultationMinigame.unity
+    guid: e7536ba5d6abb6c42a4e2fd11bf9dfa2
+  - enabled: 1
+    path: Assets/Scenes/TemperatureMinigame.unity
+    guid: 5c833a4693453fd45b21511b96347aa3
+  - enabled: 1
+    path: Assets/Scenes/XRayMinigame.unity
+    guid: 219d71a8a9a39b6438c318a34780532c
+  - enabled: 1
+    path: Assets/Scenes/EscayolaMinigame.unity
+    guid: 202ca378b529ec34183b23c38dd3d52b
+  - enabled: 1
+    path: Assets/Scenes/SutureMinigame.unity
+    guid: 398498e0b107e3c4ba51d59148729ff5
   m_configObjects: {}
