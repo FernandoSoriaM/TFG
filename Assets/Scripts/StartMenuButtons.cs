@@ -11,6 +11,9 @@ public class StartMenuButtons : MonoBehaviour
     public void CharacterScreen(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
+    public void LibraryScreen(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 8);
+    }
     public void ExitApp(){
         Application.Quit();
     }
