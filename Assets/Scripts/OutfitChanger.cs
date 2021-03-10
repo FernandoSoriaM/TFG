@@ -15,7 +15,7 @@ public class OutfitChanger : MonoBehaviour
     public void NextOption(){
         currentOption++;
         if(currentOption >= options.Count){
-            currentOption = 0;
+            currentOption = 0; //Reset if cycled
         }
         bodyPart.sprite = options[currentOption];
     }
