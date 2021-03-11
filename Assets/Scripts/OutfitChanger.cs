@@ -27,4 +27,9 @@ public class OutfitChanger : MonoBehaviour
         }
         bodyPart.sprite = options[currentOption];
     }
+    
+    public void Randomize(){
+        currentOption = Random.Range(0, options.Count - 1);
+        bodyPart.sprite = options[currentOption];
+    }
 }
