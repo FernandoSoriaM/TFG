@@ -39,8 +39,9 @@
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />
      <Compile Include="Assets\Scripts\ProcedureSelection.cs" />
      <Compile Include="Assets\Scripts\OutfitChanger.cs" />
-     <Compile Include="Assets\Scripts\StartMenuButtons.cs" />
      <Compile Include="Assets\Scripts\AuscultateMinigame.cs" />
+     <Compile Include="Assets\Scripts\StartMenuButtons.cs" />
+     <Compile Include="Assets\Scripts\OutfitMaster.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
