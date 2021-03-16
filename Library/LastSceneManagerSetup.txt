@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ProcedureSelector.unity
+- path: Assets/Scenes/TemperatureMinigame.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
