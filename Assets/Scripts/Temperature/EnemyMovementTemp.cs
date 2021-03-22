@@ -7,6 +7,9 @@ public class EnemyMovementTemp : MonoBehaviour
     public float speed;
     public float destroyingDistance;
 
+    //public ProgressBar progressBar;
+    //public float progress;
+
     private Transform target;
 
     void Start(){

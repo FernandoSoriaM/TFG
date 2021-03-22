@@ -6,19 +6,19 @@ using UnityEngine.SceneManagement;
 public class ProcedureSelection : MonoBehaviour
 {
     public void AuscultationScreen(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene("AuscultationMinigame");
     }
     public void TemperatureScreen(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+        SceneManager.LoadScene("TemperatureMinigame");
     }
     public void XRayScreen(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 5);
+        SceneManager.LoadScene("XRayMinigame");
     }
     public void EscayolaScreen(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 6);
+        SceneManager.LoadScene("EscayolaMinigame");
     }
     public void SutureScreen(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 7);
+        SceneManager.LoadScene("SutureMinigame");
     }
     public void GoBack(){
         SceneManager.LoadScene("MainMenu");

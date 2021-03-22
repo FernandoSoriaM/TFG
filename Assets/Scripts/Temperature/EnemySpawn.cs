@@ -1,46 +1,64 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+//GameHandler
 public class EnemySpawn : MonoBehaviour
 {
-    public GameObject enemy;
-    float randX;
-    float randY;
-    Vector2 whereToSpawn;
-    //Time they take to spawn
-    public float spawnRate = 2f;
-    float nextSpawn = 0.0f;
+    [SerializeField]
+    private float spawnRadius = 20;
+    private float time = 1.5f;
+
+    public GameObject[] enemies;
+
+    public float progress = 0;
+    public float topProgress;
+
+    public GameObject winMenu;
+
+    public bool isStopped;
+
+    public ProgressBar progressBar;
+
+    void Start(){
+        winMenu.SetActive(false);
+
+        StartCoroutine(SpawnAnEnemy());
+
+        progressBar.SetProgress(progress);
+    }
 
     void Update(){
-        if(Time.time > nextSpawn){
-            nextSpawn = Time.time +spawnRate;
-            randX = Random.Range (-8.4f, 8.4f);
-            randY = Random.Range (-3f, 3f);
-            whereToSpawn = new Vector2(randX, randY);
-            Instantiate(enemy, whereToSpawn, Quaternion.identity);
+        progressBar.SetProgress(progress += Time.deltaTime);
+        if(progress >= topProgress){
+            WinGame();
         }
     }
-    /*
-    public Transform[] spawnPoints;
-	public GameObject[] monsters;
-	int randomSpawnPoint, randomMonster;
-	public static bool spawnAllowed;
 
-	// Use this for initialization
-	void Start () {
-		spawnAllowed = true;
-		InvokeRepeating ("SpawnAMonster", 0f, 1f);
-	}
-
-	void SpawnAMonster()
-	{
-		if (spawnAllowed) {
-			randomSpawnPoint = Random.Range (0, spawnPoints.Length);
-			randomMonster = Random.Range (0, monsters.Length);
-			Instantiate (monsters [randomMonster], spawnPoints [randomSpawnPoint].position,
-				Quaternion.identity);
-		}
-	}
-    */
+    IEnumerator SpawnAnEnemy(){
+        Vector2 spawnPos = GameObject.FindGameObjectWithTag("Objective").transform.position;
+        spawnPos += Random.insideUnitCircle.normalized * spawnRadius;
+        Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPos, Quaternion.identity);
+        yield return new WaitForSeconds(time);
+        StartCoroutine(SpawnAnEnemy());
+    }
+    void OnTriggerEnter2D(Collider2D col) {
+        switch (col.gameObject.tag){      
+            case "Enemy":
+                if(progress > 5){
+                    progressBar.SetProgress(progress -= 5);
+                }
+                break;
+        }
+    }
+    public void WinGame(){
+        winMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isStopped = true;
+    }
+    public void GoToMainMenu(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
 }
