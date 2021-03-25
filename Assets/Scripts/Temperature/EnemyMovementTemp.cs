@@ -6,18 +6,18 @@ public class EnemyMovementTemp : MonoBehaviour
 {
     public float speed;
     public float destroyingDistance;
-
-    //public ProgressBar progressBar;
-    //public float progress;
-
     private Transform target;
 
-    void Start(){
+    void Start(){ 
         target = GameObject.FindGameObjectWithTag("Objective").GetComponent<Transform>();
     }
 
     void Update(){
         if(Vector2.Distance(transform.position, target.position) > destroyingDistance){
+            Vector3 difference = target.position - transform.position;
+            difference.Normalize();
+            float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
     }

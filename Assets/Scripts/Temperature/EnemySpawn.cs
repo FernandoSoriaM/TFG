@@ -17,12 +17,17 @@ public class EnemySpawn : MonoBehaviour
 
     public GameObject winMenu;
 
+    public CameraShakeAnimation cameraShake;
+
     public bool isStopped;
 
     public ProgressBar progressBar;
 
+    public GameObject explosionParticle;
+
     void Start(){
         winMenu.SetActive(false);
+        explosionParticle.SetActive(false); 
 
         StartCoroutine(SpawnAnEnemy());
 
@@ -46,12 +51,19 @@ public class EnemySpawn : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col) {
         switch (col.gameObject.tag){      
             case "Enemy":
+                explosionParticle.SetActive(true);
+                StartCoroutine(cameraShake.Shake(.15f, .4f));
                 if(progress > 5){
                     progressBar.SetProgress(progress -= 5);
                 }
+                Invoke("Esperar", 1);
                 break;
         }
     }
+    public void Esperar(){
+        explosionParticle.SetActive(false);
+    }
+
     public void WinGame(){
         winMenu.SetActive(true);
         Time.timeScale = 0f;

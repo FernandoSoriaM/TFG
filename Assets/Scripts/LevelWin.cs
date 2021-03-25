@@ -15,14 +15,6 @@ public class LevelWin : MonoBehaviour
         winMenu.SetActive(false);   
     }
 
-    // Update is called once per frame
-    /*void Update()
-    {
-        if(progress < topProgress){
-            WinGame();
-        }
-    }*/
-
     public void WinGame(){
         winMenu.SetActive(true);
         Time.timeScale = 0f;

@@ -46,6 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Objects
+    uniqueID: 937159769
+    locked: 0
   - name: FaceLayer
     uniqueID: 3762302233
     locked: 0
