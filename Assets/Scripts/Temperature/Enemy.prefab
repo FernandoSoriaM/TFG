@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  destroyingDistance: 1
+  destroyingDistance: 0.5
 --- !u!212 &2219484826248381271
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2.73, y: 3.45}
-  m_EdgeRadius: 0.6
+  m_EdgeRadius: 0.2
 --- !u!1 &5892634227812979137
 GameObject:
   m_ObjectHideFlags: 0
