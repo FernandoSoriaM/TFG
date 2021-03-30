@@ -5,16 +5,41 @@ using UnityEngine.SceneManagement;
 
 public class StartMenuButtons : MonoBehaviour
 {
+    public Animator transitionAnim;
+    public GameObject panel;
+
     public void ProcedureScreen(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(LoadScene1());
     }
     public void CharacterScreen(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        StartCoroutine(LoadScene2());
     }
     public void LibraryScreen(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 8);
+        StartCoroutine(LoadScene3());
     }
     public void ExitApp(){
         Application.Quit();
+    }
+
+    IEnumerator LoadScene1(){
+        panel.SetActive(true);
+        transitionAnim.SetTrigger("outro");
+        yield return new WaitForSeconds(1.05f);
+        panel.SetActive(false);
+        SceneManager.LoadScene("ProcedureSelector");
+    }
+    IEnumerator LoadScene2(){
+        panel.SetActive(true);
+        transitionAnim.SetTrigger("outro");
+        yield return new WaitForSeconds(1.05f);
+        panel.SetActive(false);
+        SceneManager.LoadScene("CharacterCreation");
+    }
+    IEnumerator LoadScene3(){
+        panel.SetActive(true);
+        transitionAnim.SetTrigger("outro");
+        yield return new WaitForSeconds(1.05f);
+        panel.SetActive(false);
+        SceneManager.LoadScene("Library");
     }
 }
