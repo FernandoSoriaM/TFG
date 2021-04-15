@@ -22,6 +22,7 @@ public class LevelWin : MonoBehaviour
     }
 
     public void GoToMainMenu(){
+        Debug.Log("Click");
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }

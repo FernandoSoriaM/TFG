@@ -15,32 +15,36 @@ public class EnemySpawn : MonoBehaviour
     public float progress = 0;
     public float topProgress;
 
+    //Canvas
     public GameObject winMenu;
-
-    public CameraShakeAnimation cameraShake;
-
+    
     public bool isStopped;
+
+    //Animation
+    public CameraShakeAnimation cameraShake;
 
     public ProgressBar progressBar;
 
     public GameObject explosionParticle;
 
     void Start(){
+        //Canvas and animation
         winMenu.SetActive(false);
         explosionParticle.SetActive(false); 
 
+        //Spawn
         StartCoroutine(SpawnAnEnemy());
 
         progressBar.SetProgress(progress);
     }
-
+    //Keeps advancing the progress bar
     void Update(){
         progressBar.SetProgress(progress += Time.deltaTime);
         if(progress >= topProgress){
             WinGame();
         }
     }
-
+    //Enemy Spawner around the object
     IEnumerator SpawnAnEnemy(){
         Vector2 spawnPos = GameObject.FindGameObjectWithTag("Objective").transform.position;
         spawnPos += Random.insideUnitCircle.normalized * spawnRadius;
@@ -48,6 +52,7 @@ public class EnemySpawn : MonoBehaviour
         yield return new WaitForSeconds(time);
         StartCoroutine(SpawnAnEnemy());
     }
+    //Colliders and events on collision
     void OnTriggerEnter2D(Collider2D col) {
         switch (col.gameObject.tag){      
             case "Enemy":
@@ -60,15 +65,17 @@ public class EnemySpawn : MonoBehaviour
                 break;
         }
     }
+    //Particle activator
     public void Esperar(){
         explosionParticle.SetActive(false);
     }
-
+    //WinCanvas
     public void WinGame(){
         winMenu.SetActive(true);
         Time.timeScale = 0f;
         isStopped = true;
     }
+    //MainMenuBtn
     public void GoToMainMenu(){
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");

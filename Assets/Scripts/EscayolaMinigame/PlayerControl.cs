@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float moveSpeed = 10f;
+    public float moveSpeed;
     public Rigidbody2D rb;
 
     private float moveX;
@@ -17,6 +17,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         moveX = Input.GetAxis("Horizontal") * moveSpeed;
+        //moveX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime; //moveSpeed = 1000f;
     }
 
     private void FixedUpdate(){

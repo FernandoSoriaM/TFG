@@ -41,7 +41,10 @@
      <Compile Include="Assets\Scripts\Temperature\EnemyMovementTemp.cs" />
      <Compile Include="Assets\Scripts\Temperature\PlayerMoveTemp.cs" />
      <Compile Include="Assets\Scripts\Temperature\EnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\EscayolaMinigame\PlatformControl.cs" />
+     <Compile Include="Assets\Scripts\EscayolaMinigame\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CharacterCreator\OutfitMaster.cs" />
+     <Compile Include="Assets\Scripts\EscayolaMinigame\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\LevelWin.cs" />
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />
      <Compile Include="Assets\Scripts\IntroPanel.cs" />
@@ -50,11 +53,10 @@
      <Compile Include="Assets\Scripts\ProcedureSelection.cs" />
      <Compile Include="Assets\Scripts\CharacterCreator\OutfitChanger.cs" />
      <Compile Include="Assets\Scripts\Auscultar\AuscultateMinigame.cs" />
+     <Compile Include="Assets\Scripts\EscayolaMinigame\GameManager.cs" />
      <Compile Include="Assets\Scripts\StartMenuButtons.cs" />
-     <Compile Include="Assets\Scripts\EscayolaMinigame\PlayerControl.cs" />
-     <Compile Include="Assets\Scripts\EscayolaMinigame\PlatformControl.cs" />
-     <Compile Include="Assets\Scripts\EscayolaMinigame\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\EscayolaMinigame\GameManagerScript.cs" />
+     <Compile Include="Assets\Scripts\EscayolaMinigame\WinCondition.cs" />
+     <Compile Include="Assets\Scripts\EscayolaMinigame\ShakeBehaviour.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
