@@ -515,8 +515,8 @@ MonoBehaviour:
   progress: 0
   topProgress: 50
   winMenu: {fileID: 1939073727}
-  cameraShake: {fileID: 1480506137}
   isStopped: 0
+  cameraShake: {fileID: 1480506137}
   progressBar: {fileID: 643481034}
   explosionParticle: {fileID: 1406981089}
 --- !u!114 &439529084
@@ -11434,7 +11434,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 19.73
   field of view: 70
   orthographic: 1
   orthographic size: 11.94868
