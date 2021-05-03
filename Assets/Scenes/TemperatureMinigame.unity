@@ -249,6 +249,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 439529078}
   moveSpeed: 200
+  safeCloseDistance: 2
+  safeFarDistance: 10
   explosionParticle: {fileID: 873729905}
 --- !u!50 &193106487
 Rigidbody2D:

@@ -6,7 +6,10 @@ public class PlayerMoveTemp : MonoBehaviour
 {
     public GameObject target;
     private Vector3 moveDirection;
+    private float moveY = 0;
     public float moveSpeed;
+    public float safeCloseDistance;
+    public float safeFarDistance;
     
     public GameObject explosionParticle;
 
@@ -24,11 +27,18 @@ public class PlayerMoveTemp : MonoBehaviour
 
     void ProcessInputs(){
         float moveX = Input.GetAxisRaw("Horizontal");
+        moveY = Input.GetAxis("Vertical");
         moveDirection = new Vector3(0f, 0f, moveX).normalized;
     }
 
     void Move(){
         transform.RotateAround(target.transform.position, moveDirection, moveSpeed * Time.deltaTime);
+        if (moveY > 0 && Vector2.Distance(transform.position, target.transform.position) < safeFarDistance){
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, - moveSpeed/10 * Time.deltaTime);
+        }
+        else if(moveY < 0 && Vector2.Distance(transform.position, target.transform.position) > safeCloseDistance){
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed/10 * Time.deltaTime);
+        }  
     }
     void OnTriggerEnter2D(Collider2D col) {
         switch (col.gameObject.tag){
