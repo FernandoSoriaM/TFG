@@ -22,14 +22,10 @@ public class EnemyMovementAuscultation : MonoBehaviour
 		{
 			GameObject ball1 = Instantiate(nextBall, rb.position + Vector2.right / 4f, Quaternion.identity);
 			GameObject ball2 = Instantiate(nextBall, rb.position + Vector2.left / 4f, Quaternion.identity);
-
-			//ball1.GetComponent<Ball>().startForce = new Vector2(2f, 5f);
-			//ball2.GetComponent<Ball>().startForce = new Vector2(-2f, 5f);
+			
             ball1.GetComponent<EnemyMovementAuscultation>().startForce = new Vector2(2f, 5f);
 			ball2.GetComponent<EnemyMovementAuscultation>().startForce = new Vector2(-2f, 5f);
 		}
-
 		Destroy(gameObject);
 	}
-
 }

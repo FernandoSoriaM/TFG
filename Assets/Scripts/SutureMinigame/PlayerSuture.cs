@@ -24,7 +24,7 @@ public class PlayerSuture : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col){
         if(col.tag == "Enemy"){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            transform.position = new Vector2(0, -5);
         }
     }
 }

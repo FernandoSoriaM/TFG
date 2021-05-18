@@ -11,6 +11,9 @@ public class PlayerMovementAuscultation : MonoBehaviour {
 
 	private float movement = 0f;
 
+	public GameObject explosionParticle;
+	public CameraShakeAnimation cameraShake;
+
 	// Update is called once per frame
 	void Update () {
 		movement = Input.GetAxis("Horizontal") * speed;
@@ -22,12 +25,16 @@ public class PlayerMovementAuscultation : MonoBehaviour {
 		rb.MovePosition(rb.position + new Vector2 (movement * Time.fixedDeltaTime, 0f));
 	}
 
-	/*void OnCollisionEnter2D (Collision2D col)
+	void OnCollisionEnter2D (Collision2D col)
 	{
-		if (col.collider.tag == "Ball")
+		if (col.collider.tag == "Enemy")
 		{
-
+			explosionParticle.SetActive(true);
+			StartCoroutine(cameraShake.Shake(.15f, .4f));
+			Invoke("Wait", 1);
 		}
-	}*/
-
+	}
+	void Wait(){
+		explosionParticle.SetActive(false);
+	}
 }

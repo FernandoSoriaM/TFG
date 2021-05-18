@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class AttackAuscultation : MonoBehaviour {
 
-	public Transform player;
-
 	public float speed = 2f;
 
-    public GameObject bullet;
-
 	public static bool IsFired;
+
+	public Transform player;
+
+	public SpriteRenderer bullet;
+
+	public WinHandler winHandler;
 
 	// Use this for initialization
 	void Start () {
 		IsFired = false;
+		SpriteRenderer bullet = gameObject.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -27,13 +30,25 @@ public class AttackAuscultation : MonoBehaviour {
 		
 		if (IsFired)
 		{
-            //GameObject phonobullet = Instantiate(bullet, rb.position + Vector2.up * Time.deltaTime * speed / 4f, Quaternion.identity);
-		//	transform.localScale = transform.localScale + Vector3.up * Time.deltaTime * speed;
-		} else
+ 			bullet.enabled = true;
+			transform.Translate(Vector3.up * speed * Time.deltaTime, Space.World);
+		} 
+		else
 		{
+			bullet.enabled = false;
             transform.position = player.position;
-		    transform.localScale = new Vector3(1f, 0f, 1f);
 		}
 
+	}
+
+	void OnTriggerEnter2D (Collider2D col)
+	{
+		IsFired = false;
+
+		if (col.tag == "Enemy")
+		{	
+			col.GetComponent<EnemyMovementAuscultation>().Split();
+			winHandler.LessEnemy();
+		}
 	}
 }
