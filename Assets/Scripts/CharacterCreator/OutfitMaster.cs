@@ -24,10 +24,8 @@ public class OutfitMaster : MonoBehaviour
 
     //Funcion para guardar el personaje con los cambios
     public void Submit(){
-        //_PrefabUtility.SaveAsPrefabAsset(character, "Assets/Character.prefab");
-        /*foreach (OutfitChanger saver in outfitSaver){
-            saver.
-        }*/
+        //NO FUNCIONA SIN UNITY EDITOR PrefabUtility.SaveAsPrefabAsset(character, "Assets/Character.prefab");
+        
         SceneManager.LoadScene(0);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SutureSpawn : MonoBehaviour
 {
-    public GameObject enemyprefab;
+    public GameObject[] enemyprefab;
 
     //Store all the spawnpoint in an array
     public Transform[] spawnPoints;
@@ -21,6 +21,6 @@ public class SutureSpawn : MonoBehaviour
     void SpawnEnemy(){
         int randomIndex = Random.Range(0, spawnPoints.Length);
         Transform spawnPoint = spawnPoints[randomIndex];
-        Instantiate(enemyprefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemyprefab[Random.Range(0, enemyprefab.Length)], spawnPoint.position, spawnPoint.rotation);
     }
 }

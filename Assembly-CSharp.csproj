@@ -39,11 +39,14 @@
      <Compile Include="Assets\Scripts\SutureMinigame\PlayerSuture.cs" />
      <Compile Include="Assets\Scripts\Auscultar\PlayerMovementAuscultation.cs" />
      <Compile Include="Assets\Scripts\SutureMinigame\SutureSpawn.cs" />
+     <Compile Include="Assets\Scripts\CharacterCreator\Util.cs" />
      <Compile Include="Assets\Scripts\Temperature\ProgressBar.cs" />
+     <Compile Include="Assets\Scripts\Auscultar\WinHandler.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\Temperature\EnemyMovementTemp.cs" />
      <Compile Include="Assets\Scripts\Temperature\PlayerMoveTemp.cs" />
      <Compile Include="Assets\Scripts\Temperature\EnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\CharacterCreator\Customization.cs" />
      <Compile Include="Assets\Scripts\EscayolaMinigame\PlatformControl.cs" />
      <Compile Include="Assets\Scripts\EscayolaMinigame\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CharacterCreator\OutfitMaster.cs" />
@@ -55,7 +58,6 @@
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />
      <Compile Include="Assets\Scripts\IntroPanel.cs" />
      <Compile Include="Assets\Scripts\CameraShakeAnimation.cs" />
-     <Compile Include="Assets\Scripts\X-Ray Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\ProcedureSelection.cs" />
      <Compile Include="Assets\Scripts\Library.cs" />
      <Compile Include="Assets\Scripts\CharacterCreator\OutfitChanger.cs" />
@@ -64,7 +66,8 @@
      <Compile Include="Assets\Scripts\EscayolaMinigame\GameManager.cs" />
      <Compile Include="Assets\Scripts\StartMenuButtons.cs" />
      <Compile Include="Assets\Scripts\SutureMinigame\Goal.cs" />
-     <Compile Include="Assets\Scripts\Auscultar\WinHandler.cs" />
+     <Compile Include="Assets\Scripts\X-Ray Scripts\PlayerXR.cs" />
+     <Compile Include="Assets\Scripts\X-Ray Scripts\EnemyXR.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -638,6 +641,9 @@
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:/Users/ferch/Desktop/UnityTFG/TFG/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+        <HintPath>C:/Users/ferch/Desktop/UnityTFG/TFG/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>C:/Users/ferch/Desktop/UnityTFG/TFG/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
@@ -646,9 +652,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Users/ferch/Desktop/UnityTFG/TFG/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>C:/Users/ferch/Desktop/UnityTFG/TFG/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
