@@ -5,41 +5,41 @@ using UnityEngine.SceneManagement;
 
 public class StartMenuButtons : MonoBehaviour
 {
-    public Animator transitionAnim;
-    public GameObject panel;
+    //public Animator transitionAnim;
+    //public GameObject panel;
 
     public void ProcedureScreen(){
-        StartCoroutine(LoadScene1());
+        SceneManager.LoadScene("ProcedureSelector");
     }
     public void CharacterScreen(){
-        StartCoroutine(LoadScene2());
+        SceneManager.LoadScene("CharacterCreation");
     }
     public void LibraryScreen(){
-        StartCoroutine(LoadScene3());
+        SceneManager.LoadScene("Library");
     }
     public void ExitApp(){
         Application.Quit();
     }
 
-    IEnumerator LoadScene1(){
-        panel.SetActive(true);
-        transitionAnim.SetTrigger("outro");
-        yield return new WaitForSeconds(1.05f);
-        panel.SetActive(false);
+    /*IEnumerator LoadScene1(){
+        //panel.SetActive(true);
+        //transitionAnim.SetTrigger("outro");
+        //yield return new WaitForSeconds(1.05f);
+        //panel.SetActive(false);
         SceneManager.LoadScene("ProcedureSelector");
     }
     IEnumerator LoadScene2(){
-        panel.SetActive(true);
-        transitionAnim.SetTrigger("outro");
-        yield return new WaitForSeconds(1.05f);
-        panel.SetActive(false);
+        //panel.SetActive(true);
+        //transitionAnim.SetTrigger("outro");
+        //yield return new WaitForSeconds(1.05f);
+        //panel.SetActive(false);
         SceneManager.LoadScene("CharacterCreation");
     }
     IEnumerator LoadScene3(){
-        panel.SetActive(true);
-        transitionAnim.SetTrigger("outro");
-        yield return new WaitForSeconds(1.05f);
-        panel.SetActive(false);
+        //panel.SetActive(true);
+        //transitionAnim.SetTrigger("outro");
+        //yield return new WaitForSeconds(1.05f);
+        //panel.SetActive(false);
         SceneManager.LoadScene("Library");
-    }
+    }*/
 }

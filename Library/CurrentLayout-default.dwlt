@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 677, y: 492}
+  m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 39
+  controlID: 114
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,10 +144,10 @@ MonoBehaviour:
     y: 0
     width: 1485
     height: 947
-  m_MinSize: {x: 402, y: 492}
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 40
+  controlID: 44
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,10 +169,10 @@ MonoBehaviour:
     y: 0
     width: 1485
     height: 667
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 41
+  controlID: 45
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -401,7 +401,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1274ffff3274ffffd074fffff274ffff5a75ffff3e76ffff9a76ffffd676ffff1c77ffff3077ffff4077ffff0e79ffff8a79ffffa679ffff427affff647affffcc7affffb07bffff0c7cffff487cffff8e7cffffa07cffffc27cffffe69dffff9aacffff66afffffc4afffff88b4ffff66bfffff08c0ffffeec0ffff5cc3ffffdcc3ffffb8dfffffa2faffff60fbffff884e0000a64e0000f24e0000164f00004c4f0000564f0000ac570000e25700004c5d0000286000006c600000126100008a6c0000866d000088730000b6790000c2790000ec790000ac7a0000ce7a000034a50000
+      m_ExpandedIDs: 3cf8ffff60fbffff5438000084380000dc3e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -461,9 +461,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 333.8033, y: 190.69685, z: -15.974701}
+    m_Target: {x: 606.0702, y: 327.6248, z: -15.974701}
     speed: 2
-    m_Value: {x: 333.8033, y: 190.69685, z: -15.974701}
+    m_Value: {x: 606.0702, y: 327.6248, z: -15.974701}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -514,9 +514,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 269.37125
+    m_Target: 279.21976
     speed: 2
-    m_Value: 269.37125
+    m_Value: 279.21976
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -669,21 +669,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 60
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: 60
   m_LastProjectPath: C:\Users\ferch\Desktop\UnityTFG\TFG
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 17}
-    m_SelectedIDs: 203a0000
-    m_LastClickedID: 14880
-    m_ExpandedIDs: 000000000e3a0000103a0000123a0000143a0000163a0000223a000000ca9a3b
+    m_SelectedIDs: 1e3a0000
+    m_LastClickedID: 14878
+    m_ExpandedIDs: 000000000e3a0000103a0000123a0000143a0000163a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -789,7 +789,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 740
-    width: 1315
+    width: 1484
     height: 259
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &19
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 27946
+  m_LastSelectedObjectID: 14450
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52

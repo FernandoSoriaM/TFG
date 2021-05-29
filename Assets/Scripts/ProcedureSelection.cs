@@ -9,23 +9,24 @@ public class ProcedureSelection : MonoBehaviour
     public GameObject panel;
 
     public void AuscultationScreen(){
-        StartCoroutine(LoadScene4());
+        SceneManager.LoadScene("AuscultationMinigame");
     }
     public void TemperatureScreen(){
-        StartCoroutine(LoadScene5());
+        SceneManager.LoadScene("TemperatureMinigame");
     }
     public void XRayScreen(){
-        StartCoroutine(LoadScene6());
+        SceneManager.LoadScene("XRayMinigame");
     }
     public void EscayolaScreen(){
-        StartCoroutine(LoadScene7());
+        SceneManager.LoadScene("EscayolaMinigame");
     }
     public void SutureScreen(){
-        StartCoroutine(LoadScene8());
+        SceneManager.LoadScene("SutureMinigame");
     }
     public void GoBack(){
-        StartCoroutine(LoadScene9());
+        SceneManager.LoadScene("MainMenu");
     }
+    /*
     IEnumerator LoadScene4(){
         panel.SetActive(true);
         transitionAnim.SetTrigger("outro");
@@ -67,5 +68,5 @@ public class ProcedureSelection : MonoBehaviour
         yield return new WaitForSeconds(1.05f);
         panel.SetActive(false);
         SceneManager.LoadScene("MainMenu");
-    }
+    }*/
 }
