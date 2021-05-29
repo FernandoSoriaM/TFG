@@ -7,9 +7,12 @@ public class WinCondition : MonoBehaviour
     public GameObject winMenu;
     public bool isStopped;
 
+    public GameObject winSound;
+
     void OnTriggerEnter2D(Collider2D col) {
         switch (col.gameObject.tag){
             case "Player":
+                winSound.SetActive(true);
                 WinGame();
                 break;
         }

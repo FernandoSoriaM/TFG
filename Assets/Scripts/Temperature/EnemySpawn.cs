@@ -20,6 +20,9 @@ public class EnemySpawn : MonoBehaviour
     
     public bool isStopped;
 
+    public GameObject winSound;
+    public GameObject hurtSound;
+
     //Animation
     public CameraShakeAnimation cameraShake;
 
@@ -41,6 +44,7 @@ public class EnemySpawn : MonoBehaviour
     void Update(){
         progressBar.SetProgress(progress += Time.deltaTime);
         if(progress >= topProgress){
+            winSound.SetActive(true);
             WinGame();
         }
     }
@@ -56,6 +60,7 @@ public class EnemySpawn : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col) {
         switch (col.gameObject.tag){      
             case "Enemy":
+                hurtSound.SetActive(true);
                 explosionParticle.SetActive(true);
                 StartCoroutine(cameraShake.Shake(.15f, .4f));
                 if(progress > 5){
@@ -68,6 +73,7 @@ public class EnemySpawn : MonoBehaviour
     //Particle activator
     public void Esperar(){
         explosionParticle.SetActive(false);
+        hurtSound.SetActive(false);
     }
     //WinCanvas
     public void WinGame(){

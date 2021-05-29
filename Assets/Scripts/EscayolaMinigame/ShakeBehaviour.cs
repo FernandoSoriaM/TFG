@@ -5,6 +5,8 @@ using UnityEngine;
 public class ShakeBehaviour : MonoBehaviour
 {
     public CameraShakeAnimation cameraShake;
+
+    public GameObject hurtSound;
     
     public GameObject hitParticle;
     // Start is called before the first frame update
@@ -17,6 +19,7 @@ public class ShakeBehaviour : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col) {
         switch (col.gameObject.tag){      
             case "Player":
+                hurtSound.SetActive(true);
                 hitParticle.SetActive(true);
                 StartCoroutine(cameraShake.Shake(.1f, .3f));
                 Invoke("Esperar", 0.5f);
@@ -26,5 +29,6 @@ public class ShakeBehaviour : MonoBehaviour
     //Particle activator
     public void Esperar(){
         hitParticle.SetActive(false);
+        hurtSound.SetActive(false);
     }
 }

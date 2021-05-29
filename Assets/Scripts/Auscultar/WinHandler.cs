@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WinHandler : MonoBehaviour
 {
+    public GameObject winSound;
+
     public LevelWin winMenu;
 
     public bool isStopped;
@@ -21,6 +23,7 @@ public class WinHandler : MonoBehaviour
     {
         if (count == 15){
             winMenu.WinGame();
+            winSound.SetActive(true);
         }
     }
 

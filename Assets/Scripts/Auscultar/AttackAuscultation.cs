@@ -14,6 +14,9 @@ public class AttackAuscultation : MonoBehaviour {
 
 	public WinHandler winHandler;
 
+	public GameObject splitSound;
+	public GameObject shootSound;
+
 	// Use this for initialization
 	void Start () {
 		IsFired = false;
@@ -25,7 +28,9 @@ public class AttackAuscultation : MonoBehaviour {
 
 		if (Input.GetKeyDown("space"))
 		{
+			shootSound.SetActive(true);
 			IsFired = true;
+			Invoke("WaitForShoot", 0.5f);
 		}
 		
 		if (IsFired)
@@ -47,8 +52,16 @@ public class AttackAuscultation : MonoBehaviour {
 
 		if (col.tag == "Enemy")
 		{	
+			splitSound.SetActive(true);
 			col.GetComponent<EnemyMovementAuscultation>().Split();
 			winHandler.LessEnemy();
+			Invoke("Esperar", 1);
 		}
+	}
+	void Esperar(){
+		splitSound.SetActive(false);
+	}
+	void WaitForShoot(){
+		shootSound.SetActive(false);
 	}
 }

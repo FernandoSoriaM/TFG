@@ -7,6 +7,8 @@ public class PlayerXR : MonoBehaviour
 	public Rigidbody2D rb;
 	public Rigidbody2D hook;
 
+	public GameObject pauseMenu;
+
 	public float releaseTime = .15f;
 	public float maxDragDistance = 2f;
 
@@ -48,15 +50,16 @@ public class PlayerXR : MonoBehaviour
 		GetComponent<SpringJoint2D>().enabled = false;
 		this.enabled = false;
 
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(4f);
 
 		if (nextBall != null)
 		{
 			nextBall.SetActive(true);
-		} else
-		{
-			EnemyXR.EnemiesAlive = 0;
-			transform.position = new Vector2(-8, -1);
 		}
+		else{
+			EnemyXR.EnemiesAlive = 0;
+			pauseMenu.SetActive(true);
+		}
+		gameObject.SetActive(false);
 	}
 }

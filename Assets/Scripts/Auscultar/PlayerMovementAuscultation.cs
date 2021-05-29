@@ -11,6 +11,8 @@ public class PlayerMovementAuscultation : MonoBehaviour {
 
 	private float movement = 0f;
 
+		public GameObject hurtSound;
+
 	public GameObject explosionParticle;
 	public CameraShakeAnimation cameraShake;
 
@@ -29,6 +31,7 @@ public class PlayerMovementAuscultation : MonoBehaviour {
 	{
 		if (col.collider.tag == "Enemy")
 		{
+			hurtSound.SetActive(true);
 			explosionParticle.SetActive(true);
 			StartCoroutine(cameraShake.Shake(.15f, .4f));
 			Invoke("Wait", 1);
@@ -36,5 +39,6 @@ public class PlayerMovementAuscultation : MonoBehaviour {
 	}
 	void Wait(){
 		explosionParticle.SetActive(false);
+		hurtSound.SetActive(false);
 	}
 }

@@ -6,8 +6,11 @@ public class Goal : MonoBehaviour
 {
     public GameObject winMenu;
     public bool isStopped;
+
+    public GameObject winSound;
     
     void OnTriggerEnter2D(){
+        winSound.SetActive(true);
         WinGame();
     }
 

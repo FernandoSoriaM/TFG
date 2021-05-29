@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Customization : MonoBehaviour
-{
+{/*
     enum AppearanceDetail{ //x
         HAIR_MODEL,
         EYES_MODEL,
@@ -72,5 +72,5 @@ public class Customization : MonoBehaviour
 
         //chosenAppearance.Add(AppearanceDetail.HAIR_MODEL, hairIndex);
         chosenAppearance.Add(AppearanceDetail.BODY_MODEL, bodyIndex);
-    } 
+    } */
 }

@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class EnemyXR : MonoBehaviour
 {
-
-    public CameraShakeAnimation cameraShake;
     public GameObject explosionParticle;
+
+	public GameObject winSound;
+	public GameObject hurtSound;
 
     public LevelWin winMenu;
 
-    public bool isStopped;
+	public float health = 3f;
 
-	public float health = 4f;
+	public static int EnemiesAlive = 0;
 
-	public static int EnemiesAlive = 3;
+	void Start(){
+		EnemiesAlive++;
+	}
 
 	void OnCollisionEnter2D (Collision2D colInfo)
 	{
@@ -26,15 +29,18 @@ public class EnemyXR : MonoBehaviour
 
 	void Die ()
 	{
+		hurtSound.SetActive(true);
         explosionParticle.SetActive(true);
 		EnemiesAlive--;
-        StartCoroutine(cameraShake.Shake(.15f, .4f));
         Invoke("Wait", 1);
-		if (EnemiesAlive <= 0)
+		if (EnemiesAlive <= 0){
+			winSound.SetActive(true);
             winMenu.WinGame();
+		}
 		Destroy(gameObject);
 	}
     void Wait(){
+		hurtSound.SetActive(false);
         explosionParticle.SetActive(false);
     }
 }

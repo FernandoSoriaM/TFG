@@ -7,6 +7,8 @@ public class PlayerSuture : MonoBehaviour
 {
     public Rigidbody2D rb;
 
+    public GameObject hurtSound;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow)){
@@ -24,7 +26,12 @@ public class PlayerSuture : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col){
         if(col.tag == "Enemy"){
+            hurtSound.SetActive(true);
             transform.position = new Vector2(0, -5);
+            Invoke("Wait",1);
         }
+    }
+    void Wait(){
+        hurtSound.SetActive(false);
     }
 }

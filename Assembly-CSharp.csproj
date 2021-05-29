@@ -43,6 +43,7 @@
      <Compile Include="Assets\Scripts\Temperature\ProgressBar.cs" />
      <Compile Include="Assets\Scripts\Auscultar\WinHandler.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\X-Ray Scripts\PlayerXR.cs" />
      <Compile Include="Assets\Scripts\Temperature\EnemyMovementTemp.cs" />
      <Compile Include="Assets\Scripts\Temperature\PlayerMoveTemp.cs" />
      <Compile Include="Assets\Scripts\Temperature\EnemySpawn.cs" />
@@ -54,6 +55,7 @@
      <Compile Include="Assets\Scripts\EscayolaMinigame\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\EscayolaMinigame\ShakeBehaviour.cs" />
      <Compile Include="Assets\Scripts\Auscultar\EnemyMovementAuscultation.cs" />
+     <Compile Include="Assets\Scripts\X-Ray Scripts\EnemyXR.cs" />
      <Compile Include="Assets\Scripts\LevelWin.cs" />
      <Compile Include="Assets\Scripts\MusicPlayer.cs" />
      <Compile Include="Assets\Scripts\IntroPanel.cs" />
@@ -66,8 +68,10 @@
      <Compile Include="Assets\Scripts\EscayolaMinigame\GameManager.cs" />
      <Compile Include="Assets\Scripts\StartMenuButtons.cs" />
      <Compile Include="Assets\Scripts\SutureMinigame\Goal.cs" />
-     <Compile Include="Assets\Scripts\X-Ray Scripts\PlayerXR.cs" />
-     <Compile Include="Assets\Scripts\X-Ray Scripts\EnemyXR.cs" />
+     <Compile Include="Assets\Scripts\CharacterCreator\OutfitCharacter.cs" />
+     <Compile Include="Assets\Scripts\X-Ray Scripts\ControlAir.cs" />
+     <Compile Include="Assets\Scripts\MusicBehaviour.cs" />
+     <Compile Include="Assets\Scripts\HospitalScript.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
