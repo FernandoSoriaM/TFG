@@ -2,16 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//_using UnityEditor;
+//using UnityEditor;
 
 public class OutfitMaster : MonoBehaviour
 {
-
-    //public List<OutfitChanger> outfitSaver = new List<OutfitChanger>();
-
-    //_Un objeto para almacenar el prefab
-    //_public GameObject character;
-
     //Una lista donde añadir cada parte del cuerpo
     public List<OutfitChanger> outfitChangers = new List<OutfitChanger>();
 

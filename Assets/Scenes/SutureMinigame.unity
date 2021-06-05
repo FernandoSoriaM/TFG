@@ -3093,9 +3093,10 @@ GameObject:
   - component: {fileID: 1625619228}
   - component: {fileID: 1625619229}
   - component: {fileID: 1625619231}
+  - component: {fileID: 1625619232}
   m_Layer: 0
   m_Name: GameHandler
-  m_TagString: Untagged
+  m_TagString: CharacterPS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3171,6 +3172,24 @@ MonoBehaviour:
   - {fileID: 227748549}
   - {fileID: 92928231}
   spawnDelay: 0.3
+--- !u!114 &1625619232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625619227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cccc016365fca843b6be7a5986abf36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posX: 0
+  posY: 0
+  posZ: 0
+  sizeX: 0
+  sizeY: 0
+  sizeZ: 0
 --- !u!1 &1634070695
 GameObject:
   m_ObjectHideFlags: 0

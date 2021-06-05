@@ -2382,23 +2382,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803412730}
   m_CullTransparentMesh: 0
---- !u!1 &874136541 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7910840298527996301, guid: 9daa7d94e0d1e5a4ba52146827b397d1, type: 3}
-  m_PrefabInstance: {fileID: 7910840298786300992}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &874136542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874136541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa294ef6a6375d40ab2c913ede9b7a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &892897591
 GameObject:
   m_ObjectHideFlags: 0
@@ -10141,9 +10124,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1851912384}
+  - component: {fileID: 1851912385}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: CharacterPS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10163,6 +10147,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1851912385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851912383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cccc016365fca843b6be7a5986abf36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posX: 291
+  posY: 462
+  posZ: -54
+  sizeX: 14
+  sizeY: 14
+  sizeZ: 1
 --- !u!1 &1886142608
 GameObject:
   m_ObjectHideFlags: 0
@@ -10754,6 +10756,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7910840298527996301, guid: 9daa7d94e0d1e5a4ba52146827b397d1, type: 3}
       propertyPath: m_Name
+      value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910840298527996301, guid: 9daa7d94e0d1e5a4ba52146827b397d1, type: 3}
+      propertyPath: m_TagString
       value: Character
       objectReference: {fileID: 0}
     - target: {fileID: 7910840298527996302, guid: 9daa7d94e0d1e5a4ba52146827b397d1, type: 3}
